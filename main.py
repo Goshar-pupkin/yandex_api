@@ -19,7 +19,7 @@ if not toponym_to_find:
 map_api_server = "http://static-maps.yandex.ru/1.x/"
 params = {
         "ll": ",".join([toponym_to_find[0], toponym_to_find[1]]),
-        "spn": ",".join([toponym_to_find[2], toponym_to_find[3]]),
+        "z": toponym_to_find[2],
         "l": "map"
     }
 response = requests.get(map_api_server, params=params)
